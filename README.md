@@ -29,10 +29,6 @@ This project implements a simple API endpoint using Flask, a Python web framewor
     The application will be accessible at `http://localhost:5000`.
 
 
-## API Usage
-
-Describe how to use your API, including endpoints, request methods, request bodies, and responses.
-
 ## Testing with cURL
 
     curl -X POST -H "Content-Type: application/json" -d '{"status": "SUCCESS", "api_response": "This is an random float generator"}' http://localhost:5000/api/generate_random_array
