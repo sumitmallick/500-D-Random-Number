@@ -1,4 +1,4 @@
-# Project Name
+# Random Number
 
 This project implements a simple API endpoint using Flask, a Python web framework, to generate a 500-dimensional array of random floats based on the given input sentence. The generated array is returned as part of the API response.
 
@@ -25,6 +25,12 @@ This project implements a simple API endpoint using Flask, a Python web framewor
 4. **Run the Application:**
     ```
     python main.py
+    ```
+    The application will be accessible at `http://localhost:5000`.
+
+5. **Sample cURL:**
+    ```
+    curl -X POST -H "Content-Type: application/json" -d '{"status": "SUCCESS", "api_response": "This is an random float generator"}' http://localhost:5000/api/generate_random_array
     ```
     The application will be accessible at `http://localhost:5000`.
 
