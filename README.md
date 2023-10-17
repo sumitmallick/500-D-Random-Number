@@ -28,11 +28,6 @@ This project implements a simple API endpoint using Flask, a Python web framewor
     ```
     The application will be accessible at `http://localhost:5000`.
 
-5. **Sample cURL:**
-    ```
-    curl -X POST -H "Content-Type: application/json" -d '{"status": "SUCCESS", "api_response": "This is an random float generator"}' http://localhost:5000/api/generate_random_array
-    ```
-    The application will be accessible at `http://localhost:5000`.
 
 ## API Usage
 
@@ -40,6 +35,6 @@ Describe how to use your API, including endpoints, request methods, request bodi
 
 ## Testing with cURL
 
-Provide sample cURL commands for testing your API endpoints.
+    curl -X POST -H "Content-Type: application/json" -d '{"status": "SUCCESS", "api_response": "This is an random float generator"}' http://localhost:5000/api/generate_random_array
 
 ---
