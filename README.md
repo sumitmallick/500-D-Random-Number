@@ -6,8 +6,8 @@ This project implements a simple API endpoint using Flask, a Python web framewor
 
 1. **Clone the Repository:**
     ```
-    git clone <repository-url>
-    cd <repository-folder>
+    git clone https://github.com/sumitmallick/500-D-Random-Number
+    cd randomNumber
     ```
 
 2. **Set Up Virtual Environment:**
