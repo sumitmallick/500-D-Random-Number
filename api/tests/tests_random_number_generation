@@ -1,0 +1,31 @@
+import unittest
+from main import create_app
+from api.conf.auth import jwt
+
+class RandomNumberTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self.app = create_app()
+        self.client = self.app.test_client()
+        self.token = jwt.encode({'email': 'test@example.com', 'admin': 0}, 'secret', algorithm='HS256')
+
+    def test_valid_token(self):
+        response = self.client.get('/generate_random_number', headers={'Authorization': f'Bearer {self.token}'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('random_number', response.json)
+
+    def test_invalid_token(self):
+        response = self.client.get('/generate_random_number', headers={'Authorization': 'Bearer invalidtoken'}) 
+        self.assertEqual(response.status_code, 401)
+
+    def test_missing_token(self):
+        response = self.client.get('/generate_random_number')
+        self.assertEqual(response.status_code, 401)
+
+    def test_invalid_user_role(self):
+        token = jwt.encode({'email': 'test@example.com', 'admin': 1}, 'secret', algorithm='HS256')
+        response = self.client.get('/generate_random_number', headers={'Authorization': f'Bearer {token}'})
+        self.assertEqual(response.status_code, 403)
+
+if __name__ == '__main__':
+    unittest.main()
