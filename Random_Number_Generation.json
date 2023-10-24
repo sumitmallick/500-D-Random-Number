@@ -1,0 +1,107 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Random Number Generation",
+    "dateExported": "2023-10-24T06:52:32.202Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e1a77037-53d4-489d-bb14-5ea8cd17fa61",
+            "colId": "58d48f63-486a-4b7a-b9dd-9fc5d8bd31c6",
+            "containerId": "",
+            "name": "Register User",
+            "url": "http://localhost:5000/v1/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-10-24T06:28:23.194Z",
+            "modified": "2023-10-24T06:28:23.194Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"username\",\n    \"password\": \"TestPassword\",\n    \"email\": \"test@example.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "690592bd-de3d-406b-bdd1-a3742cefacd8",
+            "colId": "58d48f63-486a-4b7a-b9dd-9fc5d8bd31c6",
+            "containerId": "",
+            "name": "Login User",
+            "url": "http://localhost:5000/v1/auth/login",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-24T06:28:48.931Z",
+            "modified": "2023-10-24T06:28:48.931Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"username\",\n    \"password\": \"TestPassword\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f2070af7-45ce-4cf8-b043-f1c27bc7d282",
+            "colId": "58d48f63-486a-4b7a-b9dd-9fc5d8bd31c6",
+            "containerId": "",
+            "name": "Login User",
+            "url": "http://localhost:5000/v1/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-24T06:29:12.622Z",
+            "modified": "2023-10-24T06:29:12.622Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"password\": \"TestPassword\",\n    \"email\": \"test@example.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ce603e5d-d601-4f7c-bc59-e35a7cbaa014",
+            "colId": "58d48f63-486a-4b7a-b9dd-9fc5d8bd31c6",
+            "containerId": "",
+            "name": "Test API",
+            "url": "http://localhost:5000/data_user",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-10-24T06:29:41.283Z",
+            "modified": "2023-10-24T06:29:41.283Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTY5ODEyODUwMSwiZXhwIjoxNjk4MTMyMTAxfQ.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJhZG1pbiI6MH0.pt8kSnEe7ptx4CUaGLX3Xu0t_cSlGtBJkKLpCFa3_0nWjaTcUBpYnSOup1lE0Zr8R5dFlu2n1TMu00q0yaLtrw"
+            },
+            "tests": []
+        },
+        {
+            "_id": "3a7b9485-7f10-4d74-b610-cb5ece9b35d7",
+            "colId": "58d48f63-486a-4b7a-b9dd-9fc5d8bd31c6",
+            "containerId": "",
+            "name": "Generate Random Number",
+            "url": "http://localhost:5000/generate_random_number",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-10-24T06:30:09.835Z",
+            "modified": "2023-10-24T06:30:09.835Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"password\": \"TestPassword\",\n    \"email\": \"test@example.com\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTY5ODEyODU4OCwiZXhwIjoxNjk4MTMyMTg4fQ.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJhZG1pbiI6MH0.GV-U5NSsVu2fLYiE4a9gO2DrfA-8VRgeGZyYWQLHKVvqYRg4dc9zyT_0_8StCuCpSg-9dQYsBPDz8R2YEFPu_A"
+            },
+            "tests": []
+        }
+    ]
+}
